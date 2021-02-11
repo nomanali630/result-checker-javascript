@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="ceter">
+        <h1>Calculator! total marks & Obtain marks with Gread</h1>
+        <input id="number1" type="number" placeholder="total marks" required />
+        <input id="number2" type="number" placeholder="Obtain marks" required />
+        <button type="button" onclick="abc()">Add</button>
+        <h1 id="data"></h1>
+
+
+    </div>
+    <!-- <h1 id="answer"></h1> -->
+
+
+
+
+    <script>
+        //  var a= document.getElementById("answer")
+
+        function abc() {
+
+            let numbers1 = document.getElementById("number1").value
+            let numbers2 = document.getElementById("number2").value
+            // number1 = parseInt(number1)
+            // number2 = parseInt(number2)
+
+            let c = (numbers2 / numbers1 * 100);
+            var b = document.getElementById('data').innerHTML = Math.floor(c)+"%";
+
+            numbers1.value = ""
+
+            if (c >= 80 && c <= 100) {
+                alert("Your Grade is 'A+1'")
+            }
+            else if(c >= 70 && c <= 79) {
+                alert("Your Grade is 'A' ")
+            }
+            else if(c >= 60 && c <= 69) {
+                alert("Your Grade is 'B' ")
+            }
+            else if(c >= 50 && c <= 59) {
+                alert("Your Grade is 'C' ")
+            }
+            else if(c >= 40 && c <= 49) {
+                alert("Your Grade is 'D' ")
+            }
+            else{
+
+                alert("You are Fail")
+            }
+
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
